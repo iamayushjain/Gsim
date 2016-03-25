@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimaryDark" />
+<RelativeLayout
+    android:layout_width="260dp"
+    android:layout_height="260dp"
+    android:layout_centerHorizontal="true"
+    android:id="@+id/re1l"
+    android:layout_marginTop="50dp">
+    <ImageView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+        android:id="@+id/imageviewC"
+    android:layout_centerHorizontal="true"
+        />
+<TextView
+    android:id="@+id/textView1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+    android:layout_marginTop="100dp"
+    android:layout_centerHorizontal="true"
+    android:layout_centerVertical="true"
+    android:hint="LOADING...."
+    android:textColorHint="#80ffffff"
+    android:textAppearance="?android:attr/textAppearanceLarge"
+    android:textSize="50dp"
+    android:textColor="#fff"
+    android:autoText="false"
+    />
+</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/re1l">
+
+        <ListView
+            android:id="@+id/listView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@color/colorPrimaryDark"
+            android:divider="@color/colorPrimary"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="50dp"
+            android:dividerHeight="2dp"
+            android:clipToPadding="false">
+
+        </ListView>
+
+    </RelativeLayout>
+</RelativeLayout>
+</ScrollView>

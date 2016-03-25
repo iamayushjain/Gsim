@@ -1,0 +1,126 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ayush.gsim_beta.MyMainActivity" >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imageView"
+        android:background="@drawable/gcet"
+        android:alpha="0.8"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    >
+
+ <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="ID"
+     style="@style/editStyle"
+     android:paddingTop="60dp"
+        android:textColorHint="#40ffffff"
+     android:backgroundTint="#fff"
+     android:textColor="#fff"
+     android:layout_alignParentTop="true"
+     android:layout_alignParentLeft="true"
+     android:layout_alignParentStart="true"
+     android:layout_alignParentRight="true"
+     android:layout_alignParentEnd="true"
+     android:nextFocusForward="@+id/editText2"
+     android:imeOptions="actionNext"
+     android:singleLine="true"
+     android:layout_marginLeft="20dp"
+     android:layout_marginRight="20dp"
+     android:textAllCaps="true"
+     android:inputType="textCapCharacters"
+     android:textStyle="bold"
+     android:textAppearance="?android:attr/textAppearanceMedium"
+        >
+
+
+        <requestFocus
+            />
+    </EditText>
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editText1"
+        android:layout_alignRight="@+id/editText1"
+        android:layout_below="@+id/editText1"
+        android:layout_marginTop="42dp"
+        android:backgroundTint="#fff"
+        android:ems="10"
+        android:textColor="#fff"
+
+        android:textColorHint="#40ffffff"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:nextFocusForward="@+id/button1"
+        android:imeOptions="actionNext"
+        android:singleLine="true"/>
+
+
+    <CheckBox
+        android:id="@+id/checkBox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button1"
+        android:layout_alignRight="@+id/button1"
+        android:layout_below="@+id/editText2"
+        android:layout_marginTop="14dp"
+        android:checked="true"
+        android:text="Remember Me"
+        android:textColor="#ffffff"
+        />
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button1"
+        android:layout_alignRight="@+id/button1"
+        android:layout_below="@+id/checkBox1"
+        android:layout_marginTop="14dp"
+        android:checked="false"
+        android:text="STAY SIGNED IN"
+        android:textColor="#ffffff"
+        />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:layout_alignRight="@+id/editText2"
+        android:layout_below="@+id/checkBox2"
+        android:layout_marginTop="10dp"
+android:imeOptions="actionDone"
+        android:background="@drawable/curve_shape"
+
+        android:textColor="#fff"
+        android:alpha="0.8"
+
+        android:textColorHighlight="@color/colorAccent"
+        android:text="LOGIN" />
+
+</RelativeLayout>
+
+</RelativeLayout>

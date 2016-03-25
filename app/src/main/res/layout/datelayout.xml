@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+    android:background="@drawable/curve_shape"
+    android:id="@+id/relative"
+
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Date Wise Attendance"
+        android:id="@+id/textView4"
+        android:layout_gravity="left|top"
+        android:layout_margin="10dp"
+        android:textColor="#fff"
+        android:textStyle="bold"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginRight="143dp"
+        android:layout_marginEnd="143dp" />
+
+<FrameLayout
+
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="9dp"
+    android:id="@+id/fl1"
+    android:layout_below="@+id/textView4"
+    android:padding="10dp">
+
+    <EditText
+        android:id="@+id/calc_txt_Prise"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="20dp"
+        android:textColor="#fff"
+        android:backgroundTint="#fff"
+
+        android:hint="Enter Date"
+        android:textColorHint="#fff"
+        android:singleLine="true" />
+
+    <ImageButton
+        android:id="@+id/calc_clear_txt_Prise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/calendar"
+
+        android:layout_gravity="right|center_vertical"
+         />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="FROM:"
+        android:id="@+id/textView2"
+
+        android:textColor="#fff"
+        android:layout_gravity="left|top" />
+
+
+</FrameLayout>
+
+    <FrameLayout
+
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:id="@+id/fl2"
+        android:layout_below="@+id/fl1"
+        android:padding="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="TO:"
+            android:textColor="#fff"
+            android:id="@+id/textView3"
+            android:layout_gravity="left|top" />
+
+        <EditText
+            android:id="@+id/calc_txt_Prise1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:layout_marginTop="20dp"
+            android:textColor="#fff"
+            android:backgroundTint="#fff"
+
+            android:hint="Enter Date"
+            android:textColorHint="#fff"
+            android:singleLine="true" />
+
+        <ImageButton
+            android:id="@+id/calc_clear_txt_Prise1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/calendar"
+            android:layout_gravity="right|center_vertical"
+            />
+
+
+    </FrameLayout>
+    <FrameLayout
+
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:layout_below="@+id/fl2"
+        android:padding="5dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="OK"
+            android:id="@+id/byes"
+            android:textColor="#fff"
+            android:textStyle="bold"
+
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_gravity="end|top"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Cancel"
+            style="?android:attr/borderlessButtonStyle"
+
+            android:textColor="#fff"
+            android:id="@+id/bno"
+            android:textStyle="bold"
+            android:layout_toLeftOf="@+id/byes"
+            android:selectAllOnFocus="true"
+            android:layout_gravity="top" />
+    </RelativeLayout>
+</FrameLayout>
+
+
+</RelativeLayout>
