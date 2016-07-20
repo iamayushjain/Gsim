@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -13,273 +14,277 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.NavUtils;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.TextView;
 
-public class TabbedActivity extends Fragment{
+public class TabbedActivity extends Fragment {
 
 
-	/**
-	 * 
-	 * The {@link android.support.v4.view.PagerAdapter} that will provide
-	 * fragments for each of the sections. We use a
-	 * {@link FragmentPagerAdapter} derivative, which
-	 * will keep every loaded fragment in memory. If this becomes too memory
-	 * intensive, it may be best to switch to a
-	 * {@link android.support.v4.app.FragmentStatePagerAdapter}.
-	 */
-	SectionsPagerAdapter mSectionsPagerAdapter;
+    /**
+     * The {@link android.support.v4.view.PagerAdapter} that will provide
+     * fragments for each of the sections. We use a
+     * {@link FragmentPagerAdapter} derivative, which
+     * will keep every loaded fragment in memory. If this becomes too memory
+     * intensive, it may be best to switch to a
+     * {@link android.support.v4.app.FragmentStatePagerAdapter}.
+     */
+    SectionsPagerAdapter mSectionsPagerAdapter;
 
-	public static final String TAG = TabbedActivity.class.getSimpleName();
-	
-	/**
-	 * The {@link ViewPager} that will host the section contents.
-	 */
-	ViewPager mViewPager;
-	
-	
-	public static TabbedActivity newInstance() {
-		return new TabbedActivity();
-	}
-	
-	@Override
-	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-	}
+    public static final String TAG = TabbedActivity.class.getSimpleName();
 
-	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-		String menu = getArguments().getString("Menu");
-   	 String username = getArguments().getString("User");
-   	 String pass = getArguments().getString("Pass");
-   	 String cokie = getArguments().getString("Cook");
-   	 String sub_name[]=getArguments().getStringArray("Array");
-   	String day[]=getArguments().getStringArray("Array1");
-   	int rpc[]=getArguments().getIntArray("Array2");
-    String cl_time[]=getArguments().getStringArray("Array3");
-   	String sub_fac[]=getArguments().getStringArray("Array4");
-   	String block[]=getArguments().getStringArray("Array5");
-   	View v = inflater.inflate(R.layout.activity_item_one, container, false);
-		mSectionsPagerAdapter = new SectionsPagerAdapter(
-				getChildFragmentManager());
-		
-		mViewPager = (ViewPager) v.findViewById(R.id.pager);
-		mViewPager.setAdapter(mSectionsPagerAdapter);
-		
-		return v;
-	}
-	
-	/**
-	 * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
-	 * one of the sections/tabs/pages.
-	 */
-	public class SectionsPagerAdapter extends FragmentPagerAdapter {
+    /**
+     * The {@link ViewPager} that will host the section contents.
+     */
+    ViewPager mViewPager;
 
-		public SectionsPagerAdapter(FragmentManager fm) {
-			super(fm);
-		}
 
-		@Override
-		public Fragment getItem(int position) {
-			// getItem is called to instantiate the fragment for the given page.
-			// Return a DummySectionFragment (defined as a static inner class
-			// below) with the page number as its lone argument.
-			String menu = getArguments().getString("Menu");
-		   	String username = getArguments().getString("User");
-		   	 String pass = getArguments().getString("Pass");
-		   	 String cokie = getArguments().getString("Cook");
-		   	String sub_name[]=getArguments().getStringArray("Array");
-		   	String day[]=getArguments().getStringArray("Array1");
-			int rpc[]=getArguments().getIntArray("Array2");
-			String cl_time[]=getArguments().getStringArray("Array3");
-			String sub_fac[]=getArguments().getStringArray("Array4");
-		   	String block[]=getArguments().getStringArray("Array5");
-		   	Fragment fragment = new DummySectionFragment();
-			Bundle args = new Bundle();
-			args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, position +1);
-			args.putString("Menu", "He");
-			args.putString("User", username);
-			args.putString("Pass", pass);
-			args.putString("Cook", cokie);
-			args.putString("POSS", position+"");
-			args.putStringArray("Array", sub_name);
-			args.putStringArray("Array1", day);
-			args.putIntArray("Array2", rpc);
-			args.putStringArray("Array3", cl_time);
-			args.putStringArray("Array4", sub_fac);
-			args.putStringArray("Array5", block);
-			fragment.setArguments(args);
-			return fragment;
-		}
+    public static TabbedActivity newInstance() {
+        return new TabbedActivity();
+    }
 
-		@Override
-		public int getCount() {
-			// Show 3 total pages.
-			return 5;
-		}
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
 
-		@Override
-		public CharSequence getPageTitle(int position) {
-			Locale l = Locale.getDefault();
-			switch (position) {
-			case 0:
-				return "Monday".toUpperCase(l);
-			case 1:
-				return "Tuesday".toUpperCase(l);
-			case 2:
-				return "Wednesday".toUpperCase(l);
-			case 3:
-				return "Thursday".toUpperCase(l);
-			case 4:
-				return "Friday".toUpperCase(l);
-			
-			}
-			return null;
-		}
-	}
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        String menu = getArguments().getString("Menu");
+        String username = getArguments().getString("User");
+        String pass = getArguments().getString("Pass");
+        String cokie = getArguments().getString("Cook");
+        String sub_name[] = getArguments().getStringArray("Array");
+        String day[] = getArguments().getStringArray("Array1");
+        int rpc[] = getArguments().getIntArray("Array2");
+        String cl_time[] = getArguments().getStringArray("Array3");
+        String sub_fac[] = getArguments().getStringArray("Array4");
+        String block[] = getArguments().getStringArray("Array5");
+        View v = inflater.inflate(R.layout.activity_item_one, container, false);
+        mSectionsPagerAdapter = new SectionsPagerAdapter(
+                getChildFragmentManager());
 
-	/**
-	 * A dummy fragment representing a section of the app, but that simply
-	 * displays dummy text.
-	 */
-	public static class DummySectionFragment extends Fragment {
-		/**
-		 * The fragment argument representing the section number for this
-		 * fragment.
-		 */
-		ListView list;
-		//ProgressDialog mProgressDialog;
+        mViewPager = (ViewPager) v.findViewById(R.id.pager);
+        mViewPager.setAdapter(mSectionsPagerAdapter);
 
-		public static final String ARG_SECTION_NUMBER = "section_number";
+        return v;
+    }
 
-		public DummySectionFragment() {
-		}
-		String username;
-		String pass;
-		String cokie;
-		String sub_name[];
-		String day[];
-		String cl_time[];
-		int rpc[];
-		String sub_fac[];
-	   	String block[];
-	   	
-		View rootView;
-		int divs;
-		@Override
-		public View onCreateView(LayoutInflater inflater, ViewGroup container,
-				Bundle savedInstanceState) {
-			
-			String menu = getArguments().getString("Menu");
-		   	 username = getArguments().getString("User");
-		   	 pass = getArguments().getString("Pass");
-		   	 cokie = getArguments().getString("Cook");
-		   	 sub_name=getArguments().getStringArray("Array");
-		   	day=getArguments().getStringArray("Array1");
-		    rpc=getArguments().getIntArray("Array2");
-			cl_time=getArguments().getStringArray("Array3");
-			sub_fac=getArguments().getStringArray("Array4");
-		   	block=getArguments().getStringArray("Array5");
-		   	
-		   	divs=Integer.parseInt(getArguments().getString("POSS"));
-		   	rootView = inflater.inflate(R.layout.listview,
-					container, false);
-		   	
-		//	TextView dummyTextView = (TextView) rootView
-			//		.findViewById(R.id.section_label);
-			//dummyTextView.setText(username);
-	 list=(ListView)rootView.findViewById(R.id.listView1);
-		  //new MyTask().execute();
-	  String mon_nme[]=new String[rpc[divs]];
-	  String mon_nme1[]=new String[rpc[divs]];
-	  String mon_nme2[]=new String[rpc[divs]];
-	  String mon_nme3[]=new String[rpc[divs]];
-	  
-	  int ui=0,op=0;
-	 // mProgressDialog.dismiss();
-		
-	 for (String string : day) {
-		
-	 if(divs==0)
-	  {
-		  if(string.equals("Monday"))
-		  {
-			  mon_nme[op]=sub_name[ui];
-			  mon_nme1[op]=cl_time[ui];
-			  mon_nme2[op]=sub_fac[ui];
-			  mon_nme3[op]=block[ui];
-			  op++;
-		  }
-		//  ui++;
-	  }
-	  if(divs==1)
-	  {
-		  if(string.equals("Tuesday"))
-		  {
-			  mon_nme[op]=sub_name[ui];
-			  mon_nme1[op]=cl_time[ui];
-			  mon_nme2[op]=sub_fac[ui];
-			  mon_nme3[op]=block[ui];
-			  op++;
-		  }
-		  //ui++;
-	  }
-	 if(divs==2)
-	  {
-		  if(string.equals("Wednesday"))
-		  {
-			  mon_nme[op]=sub_name[ui];
-			  mon_nme1[op]=cl_time[ui];
-			  mon_nme2[op]=sub_fac[ui];
-			  mon_nme3[op]=block[ui];
-			  op++;
-		  }
-		  //ui++;
-	  }
-	 if(divs==3)
-	  {
-		  if(string.equals("Thursday"))
-		  {
-			  mon_nme[op]=sub_name[ui];
-			  mon_nme1[op]=cl_time[ui];
-			  mon_nme2[op]=sub_fac[ui];
-			  mon_nme3[op]=block[ui];
-			  
-			  op++;
-		  }
-		  //ui++;
-	  }
-	 if(divs==4)
-	  {
-		  if(string.equals("Friday"))
-		  {
-			  mon_nme[op]=sub_name[ui];
-			  mon_nme1[op]=cl_time[ui];
-			  mon_nme2[op]=sub_fac[ui];
-			  mon_nme3[op]=block[ui];
-			  op++;
-		  }
-		  //ui++;
-	  }
-	 ui++;
-	
-	 }
-	// ArrayAdapter<String> adapter1=new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,mon_nme);
-	 imagecustom ic=new imagecustom(getActivity(), mon_nme,mon_nme1,mon_nme2,mon_nme3);
-		//list.setAdapter(ic);
-	 
-		list.setAdapter(ic);
-	
-          
-			return rootView;
-		///	SQLiteDatabase db=openOrCreateDatabase("MYDataBase", 0, null);
-			
-		}
-	}
+    /**
+     * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
+     * one of the sections/tabs/pages.
+     */
+    public class SectionsPagerAdapter extends FragmentPagerAdapter {
+
+        public SectionsPagerAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            // getItem is called to instantiate the fragment for the given page.
+            // Return a DummySectionFragment (defined as a static inner class
+            // below) with the page number as its lone argument.
+            String menu = getArguments().getString("Menu");
+            String username = getArguments().getString("User");
+            String pass = getArguments().getString("Pass");
+            String cokie = getArguments().getString("Cook");
+            String sub_name[] = getArguments().getStringArray("Array");
+            String day[] = getArguments().getStringArray("Array1");
+            int rpc[] = getArguments().getIntArray("Array2");
+            String cl_time[] = getArguments().getStringArray("Array3");
+            String sub_fac[] = getArguments().getStringArray("Array4");
+            String block[] = getArguments().getStringArray("Array5");
+            Fragment fragment = new DummySectionFragment();
+            Bundle args = new Bundle();
+            args.putInt(DummySectionFragment.ARG_SECTION_NUMBER, position + 1);
+            args.putString("Menu", "He");
+            args.putString("User", username);
+            args.putString("Pass", pass);
+            args.putString("Cook", cokie);
+            args.putString("POSS", position + "");
+            args.putStringArray("Array", sub_name);
+            args.putStringArray("Array1", day);
+            args.putIntArray("Array2", rpc);
+            args.putStringArray("Array3", cl_time);
+            args.putStringArray("Array4", sub_fac);
+            args.putStringArray("Array5", block);
+            fragment.setArguments(args);
+            return fragment;
+        }
+
+        @Override
+        public int getCount() {
+            // Show 3 total pages.
+            return 5;
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            Locale l = Locale.getDefault();
+            switch (position) {
+                case 0:
+                    return "Monday".toUpperCase(l);
+                case 1:
+                    return "Tuesday".toUpperCase(l);
+                case 2:
+                    return "Wednesday".toUpperCase(l);
+                case 3:
+                    return "Thursday".toUpperCase(l);
+                case 4:
+                    return "Friday".toUpperCase(l);
+
+            }
+            return null;
+        }
+    }
+
+    /**
+     * A dummy fragment representing a section of the app, but that simply
+     * displays dummy text.
+     */
+    public static class DummySectionFragment extends Fragment {
+        /**
+         * The fragment argument representing the section number for this
+         * fragment.
+         */
+        ListView list;
+        //ProgressDialog mProgressDialog;
+
+        public static final String ARG_SECTION_NUMBER = "section_number";
+
+        public DummySectionFragment() {
+        }
+
+        String username;
+        String pass;
+        String cokie;
+        String sub_name[];
+        String day[];
+        String cl_time[];
+        int rpc[];
+        String sub_fac[];
+        String block[];
+
+        View rootView;
+        int divs;
+
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                                 Bundle savedInstanceState) {
+
+
+
+            String menu = getArguments().getString("Menu");
+            username = getArguments().getString("User");
+            pass = getArguments().getString("Pass");
+            cokie = getArguments().getString("Cook");
+            sub_name = getArguments().getStringArray("Array");
+            day = getArguments().getStringArray("Array1");
+            rpc = getArguments().getIntArray("Array2");
+            cl_time = getArguments().getStringArray("Array3");
+            sub_fac = getArguments().getStringArray("Array4");
+            block = getArguments().getStringArray("Array5");
+
+            divs = Integer.parseInt(getArguments().getString("POSS"));
+            rootView = inflater.inflate(R.layout.listview,
+                    container, false);
+
+            //	TextView dummyTextView = (TextView) rootView
+            //		.findViewById(R.id.section_label);
+            //dummyTextView.setText(username);
+            list = (ListView) rootView.findViewById(R.id.listView1);
+            //new MyTask().execute();
+            String mon_nme[] = new String[rpc[divs]];
+            String mon_nme1[] = new String[rpc[divs]];
+            String mon_nme2[] = new String[rpc[divs]];
+            String mon_nme3[] = new String[rpc[divs]];
+
+            int ui = 0, op = 0;
+            // mProgressDialog.dismiss();
+
+            for (String string : day) {
+
+                if (divs == 0) {
+                    if (string.equals("Monday")) {
+                        mon_nme[op] = sub_name[ui];
+                        mon_nme1[op] = cl_time[ui];
+                        mon_nme2[op] = sub_fac[ui];
+                        mon_nme3[op] = block[ui];
+                        op++;
+                    }
+                    //  ui++;
+                }
+                if (divs == 1) {
+                    if (string.equals("Tuesday")) {
+                        mon_nme[op] = sub_name[ui];
+                        mon_nme1[op] = cl_time[ui];
+                        mon_nme2[op] = sub_fac[ui];
+                        mon_nme3[op] = block[ui];
+                        op++;
+                    }
+                    //ui++;
+                }
+                if (divs == 2) {
+                    if (string.equals("Wednesday")) {
+                        mon_nme[op] = sub_name[ui];
+                        mon_nme1[op] = cl_time[ui];
+                        mon_nme2[op] = sub_fac[ui];
+                        mon_nme3[op] = block[ui];
+                        op++;
+                    }
+                    //ui++;
+                }
+                if (divs == 3) {
+                    if (string.equals("Thursday")) {
+                        mon_nme[op] = sub_name[ui];
+                        mon_nme1[op] = cl_time[ui];
+                        mon_nme2[op] = sub_fac[ui];
+                        mon_nme3[op] = block[ui];
+
+                        op++;
+                    }
+                    //ui++;
+                }
+                if (divs == 4) {
+                    if (string.equals("Friday")) {
+                        mon_nme[op] = sub_name[ui];
+                        mon_nme1[op] = cl_time[ui];
+                        mon_nme2[op] = sub_fac[ui];
+                        mon_nme3[op] = block[ui];
+                        op++;
+                    }
+                    //ui++;
+                }
+                ui++;
+
+            }
+            Log.e("OP",op+"");
+            // ArrayAdapter<String> adapter1=new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,mon_nme);
+            if(op!=0) {
+                imagecustom ic = new imagecustom(getActivity(), mon_nme, mon_nme1, mon_nme2, mon_nme3);
+                //list.setAdapter(ic);
+
+                list.setAdapter(ic);
+            }else {
+                TextView tvvv = (TextView) rootView.findViewById(R.id.textView);
+                tvvv.setText("NOTHING TO DISPLAY");
+                tvvv.setTypeface(Typeface
+                        .createFromAsset(getActivity().getAssets(), "robotothin.ttf"));
+               // list.setVisibility(View.INVISIBLE);
+
+            }
+
+            return rootView;
+            ///	SQLiteDatabase db=openOrCreateDatabase("MYDataBase", 0, null);
+
+        }
+    }
 }
-		/*private class MyTask extends AsyncTask<Void, Void, String> {
+        /*private class MyTask extends AsyncTask<Void, Void, String> {
 
 			String title ="he";
 			   String sub_name[]=null;

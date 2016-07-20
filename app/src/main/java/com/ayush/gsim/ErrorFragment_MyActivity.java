@@ -137,9 +137,8 @@ public class ErrorFragment_MyActivity extends Fragment{
 		/**
 		 * The fragment argument representing the section number for this
 		 * fragment.
-		 * 
 		 */
-		TextView t1,t2,t3,t4;
+		TextView t1, t2, t3, t4;
 		int poss;
 		View rootView;
 		ListView list;
@@ -150,51 +149,34 @@ public class ErrorFragment_MyActivity extends Fragment{
 
 		@Override
 		public View onCreateView(LayoutInflater inflater, ViewGroup container,
-				Bundle savedInstanceState)
-		{
-				 rootView = inflater.inflate(R.layout.listview,
-							container, false);
-				 String book_issue_title[]=getArguments().getStringArray("Array");
-			       String book_issue_date[]=getArguments().getStringArray("Array1");
-			       String book_due_date[]=getArguments().getStringArray("Array2");
-			       String book_return_date[]=getArguments().getStringArray("Array3");
-			if(book_issue_title.length>0) {
-				imagecustom_libissue ic=new imagecustom_libissue(getActivity(), book_issue_title,book_issue_date,book_due_date,book_return_date);
-				//list.setAdapter(ic);
-				list=(ListView)rootView.findViewById(R.id.listView1);
-				list.setAdapter(ic);
-			}
-			else
-			{
-				if(isNetworkAvailable()) {
-					TextView tvvv = (TextView) rootView.findViewById(R.id.textView);
-					tvvv.setText("Error Connecting to the Server");
-					tvvv.setTypeface(Typeface
-							.createFromAsset(getActivity().getAssets(), "robotothin.ttf"));
-				}
-				else
-				{
-					TextView tvvv = (TextView) rootView.findViewById(R.id.textView);
-					tvvv.setText("Internet Not Available");
-					tvvv.setTypeface(Typeface
-							.createFromAsset(getActivity().getAssets(), "robotothin.ttf"));
-				}
+								 Bundle savedInstanceState) {
+			rootView = inflater.inflate(R.layout.listview,
+					container, false);
+			if (isNetworkAvailable()) {
+				TextView tvvv = (TextView) rootView.findViewById(R.id.textView);
+				tvvv.setText("Error Connecting to the Server");
+				tvvv.setTypeface(Typeface
+						.createFromAsset(getActivity().getAssets(), "robotothin.ttf"));
+			} else {
+				TextView tvvv = (TextView) rootView.findViewById(R.id.textView);
+				tvvv.setText("Internet Not Available");
+				tvvv.setTypeface(Typeface
+						.createFromAsset(getActivity().getAssets(), "robotothin.ttf"));
 			}
 
-						
 
 			return rootView;
-		
+
 		}
-		
-	}
-	private static boolean isNetworkAvailable() {
-		ConnectivityManager connectivityManager
-				= (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-		NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
-		return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+
+
+		public boolean isNetworkAvailable() {
+			ConnectivityManager connectivityManager
+					= (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+			NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+			return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+
+		}
 
 	}
-
-
 }

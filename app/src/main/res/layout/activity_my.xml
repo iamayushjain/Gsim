@@ -40,6 +40,19 @@
             ads:adUnitId="ca-app-pub-5666077083567257/2174168522"
             android:layout_gravity="center_horizontal|bottom">
         </com.google.android.gms.ads.AdView>
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <ScrollView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                </ScrollView>
+
+            </RelativeLayout>
 
         </RelativeLayout>
 
@@ -61,5 +74,6 @@
         </RelativeLayout>
 
     </android.support.v4.widget.DrawerLayout>
+
 
 </LinearLayout>
