@@ -2,7 +2,6 @@ package com.ayush.gsim;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.ShapeDrawable;
@@ -12,7 +11,6 @@ import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.DrawerLayout;
-import android.util.Base64;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,13 +19,13 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.ayush.gsim.Fragments.DetailFragment;
+
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-
-import java.io.IOException;
 
 //import android.app.Fragment;
 
@@ -244,7 +242,7 @@ public class AttendanceFragment_COLOR extends Fragment {
 
 
                 }
-                //imagecustom_attendancetotal ic=new imagecustom_attendancetotal(getActivity(), presnt,absent,total);
+                //ImageCustomAttendanceTotal ic=new ImageCustomAttendanceTotal(getActivity(), presnt,absent,total);
 //			  //list.setAdapter(ic);
 ///list.setAdapter(ic);
 
@@ -268,7 +266,7 @@ public class AttendanceFragment_COLOR extends Fragment {
                 .setCancelable(false).setNegativeButton("ok", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-//				Intent i = new Intent(getActivity(), startpage.class);
+//				Intent i = new Intent(getActivity(), LauncherActivity.class);
 //				startActivity(i);
 //				getActivity().overridePendingTransition(R.anim.right_slide_in, R.anim.right_slide_out);
                 Bundle args = new Bundle();

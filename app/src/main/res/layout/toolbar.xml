@@ -1,21 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/toolbar"
-    android:minHeight="?attr/actionBarSize"
-    android:background="?attr/colorPrimaryDark"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:titleTextColor="#fff"
-    >
-    <TextView
-        android:layout_height="match_parent"
-        android:layout_width="wrap_content"
-        android:text="GSIM"
-        android:textSize="30dp"
-        android:textColor="#fff"
-            android:paddingTop="5dp"
-        android:id="@+id/toolbar_title" >
+    android:background="?attr/colorPrimaryDark"
+    android:minHeight="?attr/actionBarSize"
+    android:titleTextColor="#fff">
 
-    </TextView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:text="GSIM"
+            android:textColor="#fff"
+            android:textSize="30dp"></TextView>
+
+        <ImageButton
+            android:id="@+id/chatButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_toRightOf="@+id/toolbar_title"
+            android:background="@color/transparent"
+            android:src="@drawable/home"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/transparent"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:src="@drawable/more"
+            android:visibility="gone" />
+
+    </RelativeLayout>
 
 </android.support.v7.widget.Toolbar>

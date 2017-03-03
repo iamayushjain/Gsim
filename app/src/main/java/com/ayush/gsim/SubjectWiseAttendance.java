@@ -14,6 +14,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.ayush.gsim.ImageCustoms.ImageCustomSubjectAttendance;
+
 import java.util.Locale;
 
 public class SubjectWiseAttendance extends Fragment {
@@ -189,7 +191,7 @@ public class SubjectWiseAttendance extends Fragment {
                 }
 
 
-                imagecustom_subjectattendance ic = new imagecustom_subjectattendance(getActivity(), book_issue_title, book_issue_date, atten_pre, atten_abse, atten_total);
+                ImageCustomSubjectAttendance ic = new ImageCustomSubjectAttendance(getActivity(), book_issue_title, book_issue_date, atten_pre, atten_abse, atten_total);
                 //list.setAdapter(ic);
                 list = (ListView) rootView.findViewById(R.id.listView1);
                 list.setAdapter(ic);
@@ -202,13 +204,13 @@ public class SubjectWiseAttendance extends Fragment {
 
         }
         void ErrorDialog() {
-            Toast.makeText(getActivity(),"Error Dialog",3000).show();
+            Toast.makeText(getActivity(),"Error Dialog",Toast.LENGTH_LONG).show();
             AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
             builder.setMessage("Error Connecting to The Server")
                     .setCancelable(false).setNegativeButton("OK", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-//                Intent i = new Intent(MyActivity.this, startpage.class);
+//                Intent i = new Intent(MyActivity.this, LauncherActivity.class);
 //                startActivity(i);
 //                overridePendingTransition(R.anim.right_slide_in, R.anim.right_slide_out);
 //                    args.putString("Menu", menu[0]);

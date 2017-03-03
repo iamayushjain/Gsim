@@ -25,7 +25,7 @@ public class ErrorActivity extends Activity {
                 Intent intent = new Intent(Intent.ACTION_MAIN);
                 intent.addCategory(Intent.CATEGORY_HOME);
                 startActivity(intent);
-                android.os.Process.killProcess(android.os.Process.myPid());
+            //    android.os.Process.killProcess(android.os.Process.myPid());
 
 
             }

@@ -1,32 +1,43 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
-    >
-
-    <include layout="@layout/toolbar" />
+    android:orientation="vertical">
 
 
-    <android.support.v4.widget.DrawerLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:id="@+id/drawerLayout"
         android:layout_height="match_parent"
-       >
-        <!-- activity view -->
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/container_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar" />
+        </LinearLayout>
+
         <FrameLayout
             android:id="@+id/content_frame"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/adView"
-            >
+            android:layout_above="@+id/adView">
 
 
         </FrameLayout>
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
         <com.google.android.gms.ads.AdView
             android:id="@+id/adView"
             android:layout_width="wrap_content"
@@ -34,46 +45,52 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
 
+            android:layout_gravity="center_horizontal|bottom"
             android:clipChildren="false"
+
             ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-5666077083567257/2174168522"></com.google.android.gms.ads.AdView>
 
-            ads:adUnitId="ca-app-pub-5666077083567257/2174168522"
-            android:layout_gravity="center_horizontal|bottom">
-        </com.google.android.gms.ads.AdView>
-            <RelativeLayout
-                android:id="@+id/relativeLayout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:visibility="gone">
-
-                <ScrollView
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent">
-
-                </ScrollView>
-
-            </RelativeLayout>
-
-        </RelativeLayout>
-
-        <!-- navigation drawer -->
         <RelativeLayout
-            android:layout_gravity="left|start"
-            android:layout_width="match_parent"
-            android:background="#fff"
-            android:layout_height="match_parent">
+            android:id="@+id/relativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
 
-            <ListView
-                android:id="@+id/left_drawer"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:divider="#eee"
-                android:background="#fff"
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
 
-                android:dividerHeight="1dp" />
+            </ScrollView>
+
         </RelativeLayout>
 
-    </android.support.v4.widget.DrawerLayout>
+    </RelativeLayout>
 
+    <!-- navigation drawer -->
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_gravity="left|start"-->
+    <!--android:background="#fff"-->
+    <!--android:fitsSystemWindows="true">-->
 
-</LinearLayout>
+    <!--<ListView-->
+    <!--android:id="@+id/left_drawer"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:background="#fff"-->
+    <!--android:divider="#eee"-->
+
+    <!--android:dividerHeight="1dp" />-->
+    <!--</RelativeLayout>-->
+    <fragment
+        android:id="@+id/fragment_navigation_drawer"
+        android:name="com.ayush.gsim.FragmentDrawer"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:layout="@layout/fragment_navigation_drawer"
+        tools:layout="@layout/fragment_navigation_drawer" />
+
+</android.support.v4.widget.DrawerLayout>

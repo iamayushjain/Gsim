@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="5dp"
+        card_view:cardBackgroundColor="@color/colorPrimaryDark"
+        card_view:cardCornerRadius="2dp"
+        card_view:contentPadding="10dp">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+
+
+                <TableLayout
+                    android:id="@+id/tableLayout1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/listImage"
+
+                    android:layout_marginTop="28dp">
+
+                    <TableRow
+                        android:id="@+id/tableRow0"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        >
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:layout_margin="10dp">
+
+                        <RelativeLayout>
+
+                            <ImageView
+                                android:id="@+id/imageView1"
+                                android:layout_width="200dp"
+                                android:layout_height="200dp"
+                                android:layout_centerHorizontal="true"
+                                android:elevation="10dp"
+
+                                android:src="@drawable/developer_pic" />
+
+                            <ImageView
+                                android:id="@+id/zoomimageView1"
+                                android:layout_width="300dp"
+                                android:layout_height="400dp"
+                                android:layout_centerHorizontal="true"
+
+                                android:elevation="10dp"
+
+                                />
+
+
+                            <TextView
+                                android:id="@+id/textView1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/imageView1"
+                                android:layout_centerHorizontal="true"
+                                android:text="Ayush Jain "
+                                android:gravity="center"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:textColor="@color/primaryColor"
+                                android:textStyle="bold" />
+
+
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/textView1"
+                                android:layout_centerHorizontal="true"
+                                android:text="Student,"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/primaryColor"
+                                android:textStyle="italic"
+                                android:gravity="center"/>
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/textView3"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:ellipsize="marquee"
+                                android:fadingEdge="horizontal"
+                                android:lines="1"
+                                android:marqueeRepeatLimit="marquee_forever"
+                                android:scrollHorizontally="true"
+                                android:layout_centerHorizontal="true"
+                                android:autoText="false"
+                                android:gravity="center"
+                                android:text="  Department Of Information Technology  "
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/primaryColor"
+                                android:textColorHint="#80009688"
+                                android:textStyle="italic" />
+
+                            <TextView
+                                android:id="@+id/textView4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/textView2"
+                                android:layout_centerHorizontal="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center"
+                                android:text="Connect Me On LinkedIN"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/primaryColor"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/linkedinpro"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_below="@+id/textView2"
+                                android:layout_margin="5dp"
+                                android:layout_toRightOf="@+id/textView4"
+                                android:elevation="5dp"
+
+                                android:src="@drawable/linkedin" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout>
+
+                        </RelativeLayout>
+
+                    </TableRow>
+
+
+                    <TableRow
+                        android:id="@+id/tableRow3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp">
+
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"></TableRow>
+
+                    <TableRow
+                        android:id="@+id/tableRow5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp">
+
+                    </TableRow>
+                </TableLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

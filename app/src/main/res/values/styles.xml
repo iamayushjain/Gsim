@@ -3,10 +3,12 @@
     <style name="myAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/primaryColor</item>
         <item name="colorPrimaryDark">@color/primaryColorDark</item>
+
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
-        <item name="android:textColorSecondary">#000</item>
+
+        <item name="android:textColorSecondary">#80000000</item>
 
     </style>
 
@@ -14,6 +16,7 @@
         <item name="spinBars">true</item>
         <item name="color">@android:color/white</item>
     </style>
+
     <style name="editStyle">
         <item name="android:textStyle">bold</item>
 

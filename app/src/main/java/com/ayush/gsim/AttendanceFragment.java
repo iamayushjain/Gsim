@@ -2,15 +2,12 @@ package com.ayush.gsim;
 import java.io.IOException;
 
 
-import java.util.*;
-
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
 
-import android.app.Application;
 import android.graphics.Color;
 import android.graphics.Typeface;
 
@@ -18,24 +15,11 @@ import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.OvalShape;
 
 import android.util.*;
-import android.app.ActionBar;
 //import android.app.Fragment;
-import android.app.FragmentTransaction;
-import android.app.ActionBar.Tab;
-import android.content.Context;
-import android.content.SharedPreferences;
-import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.ActionBarDrawerToggle;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -45,6 +29,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.ayush.gsim.ImageCustoms.ImageCustomAttendanceTotal;
 
 public class AttendanceFragment extends Fragment {
     TextView text;
@@ -61,8 +46,7 @@ public class AttendanceFragment extends Fragment {
 	private boolean mFromSavedInstanceState=false;
 	public static final String TAG =AttendanceFragment.class.getSimpleName();
 	
-
-    private static final String PREF_USER_LEARNED_DRAWER = "navigation_drawer_learned";
+	private static final String PREF_USER_LEARNED_DRAWER = "navigation_drawer_learned";
 	String username;
 	String pass;
 	String cokie;
@@ -102,7 +86,6 @@ public class AttendanceFragment extends Fragment {
 		view1.setTypeface(Typeface
 				.createFromAsset(getActivity().getAssets(), "robotothin.ttf"));
 		list=(ListView)view.findViewById(R.id.listView1);
-
 
 		new MyTask().execute();
 
@@ -254,7 +237,7 @@ public class AttendanceFragment extends Fragment {
 
 
 			  }
-	  imagecustom_attendancetotal ic=new imagecustom_attendancetotal(getActivity(), presnt,absent,total);
+	  ImageCustomAttendanceTotal ic=new ImageCustomAttendanceTotal(getActivity(), presnt,absent,total);
 //			  //list.setAdapter(ic);
 list.setAdapter(ic);
 

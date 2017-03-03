@@ -7,7 +7,8 @@
         android:orderInCategory="100"
         android:title="Options"
 
-        app:showAsAction="never"
-        />
+        android:enabled="false"
+        
+        app:showAsAction="never" />
 
 </menu>

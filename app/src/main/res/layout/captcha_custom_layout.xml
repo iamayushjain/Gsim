@@ -1,71 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
     android:layout_height="fill_parent"
-    android:padding="20dp"
-    android:background="@drawable/curve_shape">
+    android:padding="10dp">
 
-    <ImageView
-        android:id="@+id/image"
-        android:layout_width="fill_parent"
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginRight="25dp"
-        android:adjustViewBounds="true"
-        android:scaleType="centerCrop"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/circle"
-        />
+        android:layout_gravity="center"
+        android:alpha=".9"
+        card_view:cardBackgroundColor="@color/white"
+        card_view:cardCornerRadius="10dp"
+        card_view:contentPaddingTop="20dp">
 
-    <TextView
-        android:id="@+id/text"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textColor="#FFF"
-        android:layout_toRightOf="@+id/image"/>
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/image"
-        android:ems="10"
-        android:hint="Captcha"
-        style="@style/editStyle"
-        android:paddingTop="30dp"
-        android:textColorHint="#40000000"
-        android:backgroundTint="#000"
-        android:textColor="#000"
-        android:imeOptions="actionNext"
-        android:nextFocusForward="@+id/dialogButtonOK"
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignRight="@+id/image"
-        android:layout_alignLeft="@+id/image"
-        android:singleLine="true"
-        android:textStyle="bold"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        ><requestFocus
-    />
-    </EditText>
-    <Button
-        android:id="@+id/dialogButtonOK"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=" LOGIN"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/editText1"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="25dp"
+                android:adjustViewBounds="true"
+                android:elevation="15dp"
+                android:scaleType="centerCrop"
+                android:contentDescription="@string/captcha_hint"
+                android:src="@drawable/timetable" />
 
-        android:layout_alignRight="@+id/editText1"
-android:layout_alignLeft="@+id/editText1"
-        android:imeOptions="actionDone"
-        android:background="@drawable/curve_shape"
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image"
+                android:layout_margin="10dp">
+
+                <EditText
+                    android:id="@+id/editText1"
+                    style="@style/editStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="@string/captcha_hint"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapCharacters|textVisiblePassword"
+                    android:nextFocusForward="@+id/dialogButtonOK"
+                    android:maxLines="1"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/colorPrimary"
+                    android:textColorHint="@color/green_light"
+                    android:textStyle="bold">
+
+                    <requestFocus />
+                </EditText>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/button_card_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/input_layout_password"
+                android:layout_gravity="center"
+                card_view:cardBackgroundColor="@color/green_light"
+                >
+
+                <TextView
+                    android:id="@+id/dialogButtonOK"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/editText1"
+                    android:layout_margin="15dp"
+                    android:background="@color/transparent"
+                    android:gravity="center"
+                    android:imeOptions="actionDone"
+                    android:text="@string/login_button"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/white"
+                    android:textColorHighlight="@color/colorAccent" />
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <!--<ImageView--><!--android:id="@+id/image"--><!--android:layout_width="fill_parent"--><!--android:layout_height="wrap_content"--><!--android:layout_centerHorizontal="true"--><!--android:layout_marginRight="25dp"--><!--android:adjustViewBounds="true"--><!--android:elevation="15dp"--><!--android:scaleType="centerCrop"--><!--android:src="@drawable/logo" />-->
+
+    <!--<TextView--><!--android:id="@+id/text"--><!--android:layout_width="fill_parent"--><!--android:layout_height="wrap_content"--><!--android:layout_toRightOf="@+id/image"--><!--android:textColor="#FFF" />-->
+
+    <!--<EditText--><!--android:id="@+id/editText1"--><!--style="@style/editStyle"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_alignLeft="@+id/image"--><!--android:layout_alignParentEnd="true"--><!--android:layout_alignParentLeft="true"--><!--android:layout_alignParentRight="true"--><!--android:layout_alignParentStart="true"--><!--android:layout_alignRight="@+id/image"--><!--android:layout_below="@+id/image"--><!--android:backgroundTint="#000"--><!--android:ems="10"-->
+
+    <!--android:hint="Captcha"--><!--android:imeOptions="actionNext"--><!--android:nextFocusForward="@+id/dialogButtonOK"--><!--android:paddingTop="30dp"--><!--android:inputType="textVisiblePassword"--><!--android:singleLine="true"--><!--android:textAppearance="?android:attr/textAppearanceMedium"--><!--android:textColor="#000"--><!--android:textColorHint="#40000000"--><!--android:textStyle="bold">-->
+
+    <!--<requestFocus />--><!--</EditText>-->
+
+    <!--<Button--><!--android:id="@+id/dialogButtonOK"--><!--android:layout_width="wrap_content"--><!--android:layout_height="wrap_content"--><!--android:layout_alignLeft="@+id/editText1"--><!--android:layout_alignParentLeft="true"--><!--android:layout_alignRight="@+id/editText1"--><!--android:layout_below="@+id/editText1"--><!--android:layout_marginLeft="15dp"--><!--android:layout_marginRight="15dp"--><!--android:layout_marginTop="10dp"--><!--android:elevation="15dp"--><!--android:imeOptions="actionDone"--><!--android:text=" LOGIN"-->
 
 
-        />
+    <!--/>-->
 
 </RelativeLayout>

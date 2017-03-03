@@ -3,5 +3,50 @@
     <string name="action_settings">LOGOUT</string>
     <string name="drawer_open">open</string>
     <string name="drawer_close">close</string>
+    <string name="facebook_app_id">1758449521085205</string>
+    <string name="login_ad">ca-app-pub-5666077083567257/7831022520</string>
+    <string name="news_feed_ad">ca-app-pub-5666077083567257/1644888122</string>
+    <string name="archive_ad">ca-app-pub-5666077083567257/3121621326</string>
+    <string name="mainActivity_ad">ca-app-pub-5666077083567257/7551820929</string>
+    <string name="chat_ad">ca-app-pub-5666077083567257/6902438523</string>
+    <string name="testid">CE8A765D73C169864D8222080FCC9DA7</string>
+
+    <string name="no_internet_message">Internet Connection Not Available</string>
+    <string name="alert_message_ok">OK</string>
+    <string name="server_failed">Error Connecting to The Server</string>
+    <string name="captcha_progress_dialog">Loading Captcha</string>
+    <string name="captcha_dialog_title">Captcha</string>
+    <string name="login_progress_dialog">LogIn</string>
+    <string name="library_progress_dialog">Library</string>
+    <string name="timetable_progress_dialog">Time Table</string>
+    <string name="chat_authentication_progress_dialog">Authentication</string>
+    <string name="archive_pad_progress_dialog">Archive Pad</string>
+    <string name="total_attendance_progress_dialog">Attendance</string>
+    <string name="course_plan_progress_dialog">Course Plan</string>
+    <string name="subject_attendance_progress_dialog">Subject Attendance</string>
+
+    <string name="loading_progress_dialog">Loading...</string>
+
+    <string-array name="nav_drawer_labels">
+        <item>HOME</item>
+        <item>Developer</item>
+        <item>Refresh</item>
+        <item>Logout</item>
+    </string-array>
+    <string name="more"> <u>More>>></u></string>
+    <string name="less"> <u>Less>>></u></string>
+    <string name="chat_not_active">Chat is closed</string>
+
+    <string name="launcher_loop">Loop - Galgotias Coders Hub</string>
+    <string name="launcher_powered_by">Powered By:</string>
+
+    <string name="login_button">LOGIN</string>
+    <string name="captcha_hint">Enter Captcha</string>
+
+    <string name="loading_message">Uploading image. Please wait.</string>
+    <string name="dialog_select_prompt">Choose a picture</string>
+    <string name="dialog_select_camera">Camera</string>
+    <string name="dialog_select_gallery">Gallery</string>
+    <string name="image_picker_error">Something is wrong with that image. Pick a different one please.</string>
 
 </resources>

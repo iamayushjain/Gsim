@@ -20,7 +20,7 @@ private final String[] web1;
 //private final Integer[] imageId;
 public imagecustom_subjectatt(Activity context,
                               String[] web, String[] web1) {
-super(context, R.layout.imagelayout, web);
+super(context, R.layout.imagecustom_library_issue, web);
 this.context = context;
 this.web = web;
 this.web1 = web1;
@@ -29,7 +29,7 @@ this.web1 = web1;
 @Override
 public View getView(int position, View view, ViewGroup parent) {
 LayoutInflater inflater = context.getLayoutInflater();
-View rowView= inflater.inflate(R.layout.imagelayout, null, true);
+View rowView= inflater.inflate(R.layout.imagecustom_library_issue, null, true);
 int color_id[]={Color.CYAN,Color.DKGRAY,Color.WHITE,Color.MAGENTA,Color.YELLOW};
 TextView txtTitle = (TextView) rowView.findViewById(R.id.textView1);
 ImageView iv=(ImageView)rowView.findViewById(R.id.listImage);

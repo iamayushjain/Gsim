@@ -1,12 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">#424242</color>
+    <color name="colorPrimaryDark">#FAFAFA</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="primaryColor">#3F51B5</color>
-    <color name="primaryColorDark">#303F9F</color>
+    <color name="primaryColor">#009688</color>
+    <color name="primaryColorDark">#00695C</color>
     <color name="primaryAbsent">#ff4500</color>
     <color name="green">#009688</color>
     <color name="newgreen">#c4c1bd</color>
 
+
+    <color name="white">#FFFFFF</color>
+    <color name="white_80_transparent">#CCFFFFFF</color>
+    <color name="white_semi_transparent">#80FFFFFF</color>
+
+    <color name="green_dark">#449E6E</color>
+    <color name="green_light">#009688</color>
+    <color name="green_light_old">#56C086</color>
+    <color name="app_intro_green">#32BEA6</color>
+    <color name="app_intro_dark_green">#2CAA95</color>
+
+    <color name="blue">#55BBEA</color>
+    <color name="blue_light">#ACDDF3</color>
+    <color name="app_intro_blue">#4CA7D2</color>
+    <color name="sky_blue_very_light">#F5FBFE</color>
+    <color name="sky_blue_light">#E1F3FB</color>
+    <color name="sky_blue_80">#99EBFF</color>
+
+    <color name="grey">#C8C8C8</color>
+    <color name="grey_dark">#9D9D9D</color>
+    <color name="grey_semi_dark">#9B9B9B</color>
+    <color name="grey_light">#EAEAEA</color>
+    <color name="grey_light_dashboard">#F8F8F8</color>
+
+    <color name="border">#DEDEDE</color>
+
+    <color name="black">#000000</color>
+    <color name="black_69">#4a4a4a</color>
+    <color name="black_03">#f8f8f8</color>
+    <color name="black_17">#c8c8c8</color>
+
+    <color name="transparent">#00FFFFFF</color>
+    <color name="search_background">#ededed</color>
+    <color name="base">#4A4A4A</color>
+
+    <color name="captcha_color">#fff</color>
 </resources>

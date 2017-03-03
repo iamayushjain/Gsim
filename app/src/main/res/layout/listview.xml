@@ -10,13 +10,13 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:background="@color/colorPrimaryDark"
-        android:divider="@color/colorPrimary"
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
         android:paddingBottom="50dp"
-        android:dividerHeight="2dp"
-        android:clipToPadding="false">
+        android:clipToPadding="false"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:background="#fff">
 
     </ListView>
 
@@ -33,6 +33,7 @@ android:layout_below="@id/listView1"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text=""
         android:id="@+id/textView"
+        android:textColor="@color/primaryColor"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 

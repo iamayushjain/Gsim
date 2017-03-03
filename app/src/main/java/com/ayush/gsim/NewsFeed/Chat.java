@@ -11,18 +11,22 @@ public class Chat {
     private long time;
     private String url;
     private String phone;
+    private String imageUrl;
+    private  String authorUrl;
 
     // Required default constructor for Firebase object mapping
     @SuppressWarnings("unused")
     private Chat() {
     }
 
-    Chat(String message, String author, long time, String url, String phone) {
+    Chat(String message, String author, long time, String url, String phone, String imageUrl,String authorUrl) {
         this.message = message;
         this.author = author;
         this.time = time;
         this.url = url;
         this.phone = phone;
+        this.imageUrl = imageUrl;
+        this.authorUrl=authorUrl;
     }
 
     public String getMessage() {
@@ -31,6 +35,9 @@ public class Chat {
 
     public String getAuthor() {
         return author;
+    }
+    public String getAuthorUrl() {
+        return authorUrl;
     }
 
     public long getTime() {
@@ -43,6 +50,11 @@ public class Chat {
 
     public String getPhone() {
         return phone;
+    }
+
+    public String getImageUrl()
+    {
+        return imageUrl;
     }
 
 }

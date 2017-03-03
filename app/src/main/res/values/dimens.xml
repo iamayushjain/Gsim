@@ -4,4 +4,16 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="app_bar_top_padding">0dp</dimen>
+
+    <dimen name="launcher_progress_width">50dp</dimen>
+    <dimen name="launcher_1">50dp</dimen>
+    <dimen name="launcher_2">50dp</dimen>
+    <dimen name="launcher_3">50dp</dimen>
+    <dimen name="elevation_dialog">24dp</dimen>
+    <dimen name="elevation_drawer">16dp</dimen>
+    <dimen name="elevation_fab_button">12dp</dimen>
+    <dimen name="elevation_card">8dp</dimen>
+    <dimen name="elevation_snack_bar">6dp</dimen>
+
+
 </resources>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "70408220148",
+    "firebase_url": "https://gsim-f0a4e.firebaseio.com",
+    "project_id": "gsim-f0a4e",
+    "storage_bucket": "gsim-f0a4e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:70408220148:android:e49d5435004c9d08",
+        "android_client_info": {
+          "package_name": "com.ayush.gsim"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "70408220148-inq5tueuess6hv3nuv0vj2d8posvhaji.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4nC66FDds_iwWN4iy1brNwX76JzQ8QXE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
